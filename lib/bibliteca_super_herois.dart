@@ -1,4 +1,5 @@
 
+
 class Ficha{
   String nomePersonagem = '';
 
@@ -22,4 +23,5 @@ class Ficha{
   ];
 
   List<String> complicacoes = [];
+
 }
