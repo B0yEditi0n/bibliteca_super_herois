@@ -13,7 +13,10 @@ class Efeito{
   int alcance = -1;
   int duracao = -1;
   
-  Future<bool> instanciarMetodo(String nome, String idEfeito) async{
+  // ###########################
+  // Methodos de Inicialização #
+  // ###########################
+  Future<bool> instanciarMetodo(String nome , String idEfeito) async{
     /*
       Carrega os atributos básicos do efeito 
       o algoritimo que o chamar precisa usar await
@@ -29,11 +32,10 @@ class Efeito{
     nome = nome;
     _idEfeito = idEfeito;
 
-    // carrega json Base    
+    // carrega json Base e preenche atributos do objeto
     var efeitos = await carregaJson('efeitos');
     var efeitoAtual = efeitos["EFECTS"][efeitos["EFECTS"].indexWhere((efeito) => efeito["e_id"] == idEfeito)];
     
-    //Preenche atributos do objeto
     _custoBase = efeitoAtual["custo_base"];
     acao       = efeitoAtual["acao"];
     alcance    = efeitoAtual["alcance"];
@@ -41,7 +43,33 @@ class Efeito{
 
     return true;
   }
+  Future<bool> reinstanciarMetodo(Map objPoder) async{
+    /*
+      Carrega os atributos básicos do efeito 
+      o algoritimo que o chamar precisa usar await
+      para carregar o json
 
+      Args:
+        objPoder - Map json de para instanciar atributos
+        
+      Return:
+        Map Json - o Arquivo json
+    */
+
+    nome = objPoder["nome"];
+    _idEfeito = objPoder["e_id"];
+    graduacao = objPoder["graduacao"];
+    acao = objPoder["acao"];
+    alcance = objPoder["alcance"];
+    duracao = objPoder["duracao"];
+
+    var efeitos = await carregaJson('efeitos');
+    var efeitoAtual = efeitos["EFECTS"][efeitos["EFECTS"].indexWhere((efeito) => efeito["e_id"] == objPoder["e_id"])];
+
+    _nomeEfeito = efeitoAtual["efeito"];     
+
+    return true;
+  }
 
   Future carregaJson(String json) async{
     /*
@@ -61,6 +89,10 @@ class Efeito{
 
   }
 
+  // ################################
+  // # Methodos de Retorno do objto #
+  // ################################
+
   Map<String, dynamic> retornaObj(){
     /*
       Retorna um json com os dados montados
@@ -70,8 +102,8 @@ class Efeito{
     */
 
     return{
+      "nome":      nome,
       "e_id":      _idEfeito,
-      "efeito":    _nomeEfeito,
       "graduacao": graduacao,
       "acao":      acao,
       "alcance":   alcance,
