@@ -26,49 +26,49 @@
                 "duracao": 3,
                 "opt":[
                     {
-                        "ID":"OP01",
+                        "ID":"E003OP01",
                         "desc": "Calor ou Frio",
                         "valor": 1,
                         "espec": false
                     },
                     {
-                        "ID":"OP02",
+                        "ID":"E003OP02",
                         "desc": "Calor ou Frio Extremo",
                         "valor": 2,
                         "espec": false
                     },
                     {
-                        "ID":"OP03",
+                        "ID":"E003OP03",
                         "desc": "Impedir Movimento",
                         "valor": 1,
                         "espec": false
                     },
                     {
-                        "ID":"OP04",
+                        "ID":"E003OP04",
                         "desc": "Impedir Movimento Extremo",
                         "valor": 2,
                         "espec": false
                     },
                     {
-                        "ID":"OP05",
+                        "ID":"E003OP05",
                         "desc": "Luz",
                         "valor": 1,
                         "espec": false
                     },
                     {
-                        "ID":"OP06",
+                        "ID":"E003OP06",
                         "desc": "Luz Intensa",
                         "valor": 2,
                         "espec": false
                     },
                     {
-                        "ID":"OP07",
+                        "ID":"E003OP07",
                         "desc": "Visibilidade",
                         "valor": 1,
                         "espec": false
                     },
                     {
-                        "ID":"OP08",
+                        "ID":"E003OP08",
                         "desc": "Visibilidade Extrema",
                         "valor": 2,
                         "espec": false
