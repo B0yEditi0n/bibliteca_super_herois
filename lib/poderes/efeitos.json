@@ -8,18 +8,18 @@
                 "acao": 1,
                 "alcance": 1,
                 "duracao": 1,
-                "tipo": "atk"
+                "ofensivo": true
 					
             },
             {
                 "e_id": "E002",
                 "efeito": "Alongamento",
-                "tipo": "gnr"
+                "ofensivo": false
             },
             {
                 "e_id": "E003",
                 "efeito": "Ambiente",
-                "tipo": "ICR",
+                "ofensivo": false,
                 "custo_base": 1,
                 "acao": 1,
                 "alcance": 4,
@@ -78,7 +78,7 @@
             {
                 "e_id": "E004",
                 "efeito": "Camuflagem",
-                "tipo": "OPT",
+                "ofensivo": false,
                 "custo_base": 2,
                 "acao": 3,
                 "alcance": 0,
@@ -119,6 +119,7 @@
             {
                 "e_id": "E005",
                 "efeito":"Característica",
+                "ofensivo": false,
                 "custo_base": 1,
                 "acao": 0,
                 "alcance": 0,
@@ -127,29 +128,33 @@
             },
             {
                 "e_id": "E006",
-                "efeito":"Caracter1stica Aumentada"
+                "efeito":"Caracter1stica Aumentada",
+                "ofensivo": false
             },
             {
                 "e_id": "E007",
-                "efeito":"Compreender"
+                "efeito":"Compreender",
+                "ofensivo": false,
             },
             {
                 "e_id": "E008",
-                "efeito":"Comunicação"
+                "efeito":"Comunicação",
+                "ofensivo": false
             },
             {
                 "e_id": "E009",
                 "efeito":"Controle de Sorte",
-                "tipo": "atk"
+                "ofensivo": true
             },
             {
                 "e_id": "E010",
-                "efeito":"Crescimento"
+                "efeito":"Crescimento",
+                "ofensivo": false
             },
             {
                 "e_id": "E011",
                 "efeito":"Criar",
-                "tipo": "atk"
+                "ofensivo": true
             },
             {
                 "e_id": "E012",

@@ -118,7 +118,7 @@ class Efeito{
         break;
       case 0 || 3 || 4:
         // Permanente Sustentado Continuo 
-        if([0, 3, 4].contains(novaDuracao)){
+        if([0, 2, 3, 4].contains(novaDuracao)){
           duracao = novaDuracao;
         }        
         break;
@@ -138,25 +138,25 @@ class Efeito{
       case 1: 
         // Padrão
         if([1, 4].contains(novaAcao)){
-          duracao = novaAcao;
+          acao = novaAcao;
         }          
         break;
       case 2:
         // Movimento
         if([1, 2].contains(novaAcao)){
-          duracao = novaAcao;
+          acao = novaAcao;
         }        
         break;
       case 3:
         // Livre
         if([1, 2, 3, 4].contains(novaAcao)){
-          duracao = novaAcao;
+          acao = novaAcao;
         }        
         break;
       case 4:
         // Reação
         if([1, 2, 3, 4].contains(novaAcao)){
-          duracao = novaAcao;
+          acao = novaAcao;
         }        
     }
   }

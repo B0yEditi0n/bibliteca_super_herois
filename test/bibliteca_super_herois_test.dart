@@ -8,4 +8,8 @@ void main() async{
   var poder = Efeito();
   await poder.instanciarMetodo('Poder01', 'E004');
   print(poder.retornaObj());
+
+  poder.alteraDuracao(2);
+
+  print(poder.retornaObj());
 }
