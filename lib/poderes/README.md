@@ -1,13 +1,13 @@
 # Progresso de implementação de poderes
 ## progresso do modulo de poderes
-Funcionaliudade Básica | Codigo | Teste | Funcional
---- | --- | --- | --- | ---
-Intancia | Ok :white_check_mark: | Ok :white_check_mark: | Ok :white_check_mark:
-Reinstancia | Ok :white_check_mark: | A Fazer :x: | Ok :x:
-Duração | Ok :white_check_mark: | A Fazer :x: | Ok :x:
-Ação | Ok :white_check_mark: | A Fazer :x: | Ok :x:
-Distância | Ok :white_check_mark: | A Fazer :x: | Ok :x:
-Custo | A Fazer :x: | A Fazer :x: | Ok :x:
+| Funcionaliudade Básica | Codigo | Teste | Funcional |
+| ---------------------- | ------ | ----- | --------- |
+| Intancia | Ok :white_check_mark: | Ok :white_check_mark: | Ok :white_check_mark: |
+| Reinstancia | Ok :white_check_mark: | A Fazer :x: | Ok :x: | 
+| Duração | Ok :white_check_mark: | A Fazer :x: | Ok :x: |
+| Ação | Ok :white_check_mark: | A Fazer :x: | Ok :x: |
+| Distância | Ok :white_check_mark: | A Fazer :x: | Ok :x: |
+| Custo | A Fazer :x: | A Fazer :x: | Ok :x: |
 
 ## Criação de Efeitos e funcionamento das Bibliotecas
 - [ ] Aflição
