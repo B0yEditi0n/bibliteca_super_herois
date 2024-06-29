@@ -7,7 +7,7 @@
 | Duração | Ok :white_check_mark: |  Ok :white_check_mark: | a Ser Testado :x: |
 | Ação | Ok :white_check_mark: |  Ok :white_check_mark: | a Ser Testado :x: |
 | Distância | Ok :white_check_mark: |  Ok :white_check_mark: | a Ser Testado :x: |
-| Custo | A Fazer :x: | A Fazer :x: | a Ser Testado :x: |
+| Custo | incompleto :warning: | A Fazer :x: | a Ser Testado :x: |
 
 ## Criação de Efeitos e funcionamento das Bibliotecas
 - [ ] Aflição
