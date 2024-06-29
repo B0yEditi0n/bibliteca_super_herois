@@ -2,7 +2,7 @@
 ## progresso do modulo de poderes
 | Funcionaliudade Básica | Codigo | Funcional | Teste |
 | ---------------------- | ------ | ----- | --------- |
-| Intancia | Ok :white_check_mark: |  :white_check_mark: | a Ser Testado :x: |
+| Intancia | Ok :white_check_mark: | OK :white_check_mark: | a Ser Testado :x: |
 | Reinstancia | Ok :white_check_mark: |  Ok :white_check_mark: | a Ser Testado :x: | 
 | Duração | Ok :white_check_mark: |  Ok :white_check_mark: | a Ser Testado :x: |
 | Ação | Ok :white_check_mark: |  Ok :white_check_mark: | a Ser Testado :x: |

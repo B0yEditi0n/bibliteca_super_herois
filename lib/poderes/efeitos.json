@@ -129,12 +129,16 @@
             {
                 "e_id": "E006",
                 "efeito":"Caracter1stica Aumentada",
-                "ofensivo": false
+                "ofensivo": false,
+                "acao": 3,
+                "alcance": 0,
+                "duracao": 3
+
             },
             {
                 "e_id": "E007",
                 "efeito":"Compreender",
-                "ofensivo": false,
+                "ofensivo": false
             },
             {
                 "e_id": "E008",
