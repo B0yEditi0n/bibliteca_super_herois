@@ -223,18 +223,41 @@ class Efeito{
         break;
     }
 
+    // - Soma dos Modificadores
+    var custoModGrad = 0;
+    var custoModfixo = 0;
+    for(var mod in _modificador){
+      if(mod["fixo"]){
+        // Custo fixo
+        custoModfixo = mod["grad"] * mod["custo"];
+      }else{
+        // Custo por graduação
+        custoModGrad = mod["grad"] * mod["custo"];
+      }
+    }
+
     // Finalizar custeio
     int custoBase = _padraoEfeito["custo_base"];
-    int custoPorG = custoBase + custoAcao + custoDurcao + custoAlcance; // Falta Modificadores
+    int custoPorG = custoBase + custoAcao + custoDurcao + custoAlcance + custoModGrad;
 
     int custoFinal = 0;
 
+    // custo por graduação
     if(custoPorG > 1){
       custoFinal = graduacao * custoPorG;
     }else{
-      // 1 : varios
+      // 1 para varios
       custoFinal = ( graduacao / ( custoPorG.abs() + 1 ) ).ceil();
     }
+
+    // Calculo de fixos
+    custoFinal += custoModfixo;
+
+    // Não pode ser 0
+    if(custoFinal < 1){
+      custoFinal = 1;
+    }
+
     return custoFinal;
   }
 

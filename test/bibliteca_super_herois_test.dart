@@ -11,5 +11,26 @@ void main() async{
 
   poder.alteraDuracao(2);
 
+  // Exemplo de Limitado
+  poder.addModificador({
+    "nome":"Limitado",
+    "descricao":"Seres Vivos",
+    "opcao": "",
+    "fixo": false,
+    "grad": 1,
+    "custo": -1
+  });
+
+  // Exemplo de Peculiaridade
+  poder.addModificador({
+    "nome":"Peculiaridade",
+    "descricao":"Perde automaticamente contra-ataques de poder",
+    "opcao": "",
+    "fixo": true,
+    "grad": 1,
+    "custo": -1
+  });
+
   print(poder.retornaObj());
+  
 }
