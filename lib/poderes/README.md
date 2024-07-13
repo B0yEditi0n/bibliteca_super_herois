@@ -9,6 +9,8 @@
 | Distância | Ok :white_check_mark: |  Ok :white_check_mark: | a Ser Testado :x: |
 | Custo | incompleto :warning: | A Fazer :x: | a Ser Testado :x: |
 | Modificadores | não implmentado :x: | A Fazer :x: | a Ser Testado :x: |
+| Gerenciar Opções | não implmentado :x: | A Fazer :x: | a Ser Testado :x: |
+
 
 ## Criação de Efeitos e funcionamento das Bibliotecas
 - [ ] Aflição

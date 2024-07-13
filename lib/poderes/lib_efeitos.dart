@@ -12,7 +12,8 @@ class Efeito{
   int _alcance = -1; // 0 - Pessoal | 1 - Perto | 2 - A Distância | 3 - Percepção | 4 - Graduação
   int _duracao = -1; // 0 - Permente | 1 - Instantanêo | 2 - Concentração | 3 - Sustentado | 4 - Contínuo 
 
-  var padraoEfeito = {};
+  var _padraoEfeito = {};
+  var _modificador = [];
   
   // ###########################
   // Methodos de Inicialização #
@@ -37,7 +38,7 @@ class Efeito{
     var efeitos = await carregaJson('efeitos');
     var efeitoAtual = efeitos["EFECTS"][efeitos["EFECTS"].indexWhere((efeito) => efeito["e_id"] == idEfeito)];
     
-    padraoEfeito = efeitoAtual;
+    _padraoEfeito = efeitoAtual;
 
     _nomeEfeito = efeitoAtual["efeito"];
     _acao       = efeitoAtual["acao"];
@@ -104,7 +105,7 @@ class Efeito{
         int novaDuracao - um valor a ser definido em duração
 
     */ 
-    var duracaoPadrao = padraoEfeito["duracao"];
+    var duracaoPadrao = _padraoEfeito["duracao"];
     switch (duracaoPadrao) {
       
       case 1 || 2: 
@@ -130,7 +131,7 @@ class Efeito{
         int novaAcao - um valor a ser definido em duração
 
     */ 
-    var acaoPadrao = padraoEfeito["acao"];
+    var acaoPadrao = _padraoEfeito["acao"];
     switch (acaoPadrao){
       case 1: 
         // Padrão
@@ -166,7 +167,7 @@ class Efeito{
         int novaDuracao - um valor a ser definido em duração
 
     */ 
-    var alcancePadrao = padraoEfeito["alcance"];
+    var alcancePadrao = _padraoEfeito["alcance"];
     switch (alcancePadrao){
       case 0:
         // Pessoal
@@ -184,6 +185,10 @@ class Efeito{
 
   }
 
+  addModificador(objModificador){
+    _modificador.add(objModificador);
+  }
+
   int CustearAlteracoes(){
     /*
       Processa o custo de alterações feitas em (Ação, Duração e Alcance)  
@@ -192,18 +197,18 @@ class Efeito{
 
     // contabilizando alterações do efeitos
     // - Ação 
-    int dfAcao = padraoEfeito["acao"];
+    int dfAcao = _padraoEfeito["acao"];
     int custoAcao = _acao - dfAcao;
 
     // - Alcance
-    int dfAlcance = padraoEfeito["alcance"];
+    int dfAlcance = _padraoEfeito["alcance"];
     int custoAlcance = 0;
     if([1, 2, 3].contains(dfAlcance)){
       custoAlcance = _alcance - dfAlcance;
     }
 
     // - Duração
-    int dfDurcao = padraoEfeito["duracao"];
+    int dfDurcao = _padraoEfeito["duracao"];
     int custoDurcao = 0;
     switch (dfDurcao) {
       case 0 || 3: // Permanente ou Sustentado
@@ -219,7 +224,7 @@ class Efeito{
     }
 
     // Finalizar custeio
-    int custoBase = padraoEfeito["custo_base"];
+    int custoBase = _padraoEfeito["custo_base"];
     int custoPorG = custoBase + custoAcao + custoDurcao + custoAlcance; // Falta Modificadores
 
     int custoFinal = 0;
